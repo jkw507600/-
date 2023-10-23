@@ -1,6 +1,6 @@
 $(function(){
     // 메뉴
-    $('.gnb').hover(
+    $('.gnb> li').hover(
         function(){
             $(this).find('ul').stop().slideDown('slow')
         },

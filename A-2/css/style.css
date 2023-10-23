@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 580px;
+    background-color: #eee;
+    height: 0;
+    transition: all 0.3s;
+    background-image: url(https://www.daejonilbo.com/news/photo/202204/1513740_413474_635.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    
+}
+
+.header.active::after {
+    height: 200px;
+}
+
+.gnb {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.gnb > li {
+    position: relative;
+}
+
+.gnb > li > a {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 60px;
+    font-weight: bold;
+}
+
+.gnb > li > a:hover {
+    color: orangered;
+}
+
+.gnb ul {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+}
+
+.gnb ul li a {
+    display: block;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.gnb ul li a:hover {
+    text-decoration: underline;
+}
+
+.slider {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position: relative;
+}
+
+.slide p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 4px 4px 4px rgba(1, 1, 1, 0.8);
+}
+
+.contents {
+    display: flex;
+    margin: 10px 0;
+    height: 200px;
+    gap: 20px;
+}
+
+.contents > div {
+    flex: 1;
+}
+
+.board {}
+
+.title {
+    display: flex;
+    gap: 20px;    
+}
+
+.title h2 {
+    width: 170px;
+    height: 50px;
+    background-color: #eee;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.title h2.active {
+    background-color: orangered;
+    color: #fff;
+}
+
+.list {
+    border: 4px solid orangered;
+    padding: 7px;
+}
+
+.notice_list li {
+    padding: 6px;
+    position: relative;
+}
+
+.notice_list li::before {
+    content: '>';
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.notice_list li a {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6px;
+}
+
+.notice_list li span:first-child:hover {
+    text-decoration: underline;
+}
+
+.gallery_list {
+    display: none;
+}
+
+.banner img {
+    display: block;
+}
+
+.link img {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    background-color: #eee;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #888;
+}
+
+.sns {
+    display: flex;
+    gap: 30px;
+    padding-right: 20px;
+}
+
+.sns img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: over;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 320px;
+    background-color: orangered;
+    padding: 40px 50px;
+    border-radius: 10px;
+    display: none;
+}
+
+.modal h3 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.modal p {
+    line-height: 1.6;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.modal button {
+    width: 55px;
+    height: 33px;
+    background-color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+}
